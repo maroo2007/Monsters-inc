@@ -1,4 +1,4 @@
-﻿package game.gui.controllers;
+package game.gui.controllers;
 
 import game.engine.Role;
 import game.gui.GameStateManager;

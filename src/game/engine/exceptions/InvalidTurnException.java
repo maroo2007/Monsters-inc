@@ -1,4 +1,4 @@
-﻿package game.engine.exceptions;
+package game.engine.exceptions;
 
 @SuppressWarnings("serial")
 public class InvalidTurnException extends GameActionException{

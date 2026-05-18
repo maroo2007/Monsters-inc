@@ -10,16 +10,16 @@
 
     <VBox alignment="CENTER" spacing="40" styleClass="role-selection-root">
 
-        <!-- Header -->
+
         <VBox alignment="CENTER" spacing="6">
             <Label text="Choose Your Side" styleClass="title-main"/>
             <Label text="Pick your role to begin the game" styleClass="title-sub"/>
         </VBox>
 
-        <!-- Role cards row -->
+
         <HBox alignment="CENTER" spacing="40">
 
-            <!-- SCARER card -->
+
             <VBox alignment="CENTER" spacing="12" styleClass="role-card role-card-scarer">
                 <Label text="SCARER" styleClass="role-emoji"/>
                 <Label text="SCARER" styleClass="role-title"/>
@@ -29,10 +29,10 @@
                         onAction="#onScarerSelected" prefWidth="180"/>
             </VBox>
 
-            <!-- VS divider -->
+
             <Label text="VS" styleClass="vs-label"/>
 
-            <!-- LAUGHER card -->
+
             <VBox alignment="CENTER" spacing="12" styleClass="role-card role-card-laugher">
                 <Label text="LAUGHER" styleClass="role-emoji"/>
                 <Label text="LAUGHER" styleClass="role-title"/>
@@ -44,10 +44,10 @@
 
         </HBox>
 
-        <!-- Status / error message -->
+
         <Label fx:id="statusLabel" text="" styleClass="status-label"/>
 
-        <!-- Back button -->
+
         <Button text="BACK" styleClass="btn-back" onAction="#onBack"/>
 
     </VBox>

@@ -10,14 +10,14 @@
 
     <VBox alignment="CENTER" spacing="40" styleClass="main-menu-root">
 
-        <!-- Title block -->
+
         <VBox alignment="CENTER" spacing="8">
             <Label text="DOOR DASH" styleClass="title-main"/>
             <Label text="Scare vs Laugh Touchdown" styleClass="title-sub"/>
             <Label text="~ Monsters Inc Board Game ~" styleClass="title-hint"/>
         </VBox>
 
-        <!-- Navigation buttons -->
+
         <VBox alignment="CENTER" spacing="16" maxWidth="300">
             <Button fx:id="btnNewGame" text="NEW GAME"
                     styleClass="btn-primary" prefWidth="260"

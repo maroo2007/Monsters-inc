@@ -1,4 +1,4 @@
-﻿package game.engine;
+package game.engine;
 
 public final class Constants {
 

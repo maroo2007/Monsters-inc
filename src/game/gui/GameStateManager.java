@@ -1,4 +1,4 @@
-﻿package game.gui;
+package game.gui;
 
 import game.engine.Game;
 import game.engine.Role;

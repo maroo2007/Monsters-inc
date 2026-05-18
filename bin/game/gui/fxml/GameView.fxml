@@ -9,7 +9,7 @@
             stylesheets="@../css/app.css, @../css/game.css"
             prefWidth="1200" prefHeight="750">
 
-    <!-- ── TOP: header bar ───────────────────────────────────────────── -->
+
     <top>
         <HBox styleClass="game-header" alignment="CENTER_LEFT" spacing="16">
             <Label text="DoorDash" styleClass="header-logo"/>
@@ -24,31 +24,31 @@
         </HBox>
     </top>
 
-    <!-- ── CENTER: board ─────────────────────────────────────────────── -->
+
     <center>
         <StackPane styleClass="board-area">
             <BoardView fx:id="boardView"/>
         </StackPane>
     </center>
 
-    <!-- ── RIGHT: sidebar ────────────────────────────────────────────── -->
+
     <right>
         <VBox styleClass="game-sidebar" spacing="12" prefWidth="240">
             <padding>
                 <Insets top="12" right="12" bottom="12" left="12"/>
             </padding>
 
-            <!-- Player panel -->
+
             <MonsterPanel fx:id="playerPanel"/>
 
             <Separator/>
 
-            <!-- Opponent panel -->
+
             <MonsterPanel fx:id="opponentPanel"/>
 
             <Separator/>
 
-            <!-- Action buttons -->
+
             <VBox spacing="8" styleClass="action-buttons">
                 <Button fx:id="btnRoll" text="ROLL DICE"
                         styleClass="btn-primary" prefWidth="215"
@@ -60,13 +60,13 @@
 
             <Separator/>
 
-            <!-- Event log -->
+
             <EventLog fx:id="eventLog"/>
 
         </VBox>
     </right>
 
-    <!-- ── BOTTOM: legend bar ────────────────────────────────────────── -->
+
     <bottom>
         <HBox styleClass="legend-bar" alignment="CENTER" spacing="20">
             <Label text="[P] You" styleClass="legend-player"/>

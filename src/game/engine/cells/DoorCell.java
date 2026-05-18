@@ -1,4 +1,4 @@
-﻿package game.engine.cells;
+package game.engine.cells;
 
 import game.engine.Board;
 import game.engine.Role;

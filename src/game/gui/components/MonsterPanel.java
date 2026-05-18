@@ -1,4 +1,4 @@
-﻿package game.gui.components;
+package game.gui.components;
 
 import game.engine.Constants;
 import game.engine.monsters.*;

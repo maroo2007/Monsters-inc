@@ -1,4 +1,4 @@
-﻿package game.gui.controllers;
+package game.gui.controllers;
 
 import game.gui.SceneManager;
 import javafx.application.Platform;

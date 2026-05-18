@@ -1,4 +1,4 @@
-﻿package game.engine.interfaces;
+package game.engine.interfaces;
 
 import game.engine.monsters.Monster;
 

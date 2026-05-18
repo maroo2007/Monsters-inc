@@ -1,4 +1,4 @@
-﻿package game.engine.dataloader;
+package game.engine.dataloader;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

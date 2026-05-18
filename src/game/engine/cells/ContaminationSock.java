@@ -1,4 +1,4 @@
-﻿package game.engine.cells;
+package game.engine.cells;
 
 import game.engine.Constants;
 import game.engine.interfaces.CanisterModifier;
