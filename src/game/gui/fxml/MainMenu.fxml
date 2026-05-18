@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="game.gui.controllers.MainMenuController"
+           stylesheets="@../css/app.css"
+           prefWidth="900" prefHeight="600">
+
+    <VBox alignment="CENTER" spacing="40" styleClass="main-menu-root">
+
+
+        <VBox alignment="CENTER" spacing="8">
+            <Label text="DOOR DASH" styleClass="title-main"/>
+            <Label text="Scare vs Laugh Touchdown" styleClass="title-sub"/>
+            <Label text="~ Monsters Inc Board Game ~" styleClass="title-hint"/>
+        </VBox>
+
+
+        <VBox alignment="CENTER" spacing="16" maxWidth="300">
+            <Button fx:id="btnNewGame" text="NEW GAME"
+                    styleClass="btn-primary" prefWidth="260"
+                    onAction="#onNewGame"/>
+            <Button fx:id="btnHowToPlay" text="HOW TO PLAY"
+                    styleClass="btn-secondary" prefWidth="260"
+                    onAction="#onHowToPlay"/>
+            <Button fx:id="btnExit" text="EXIT"
+                    styleClass="btn-danger" prefWidth="260"
+                    onAction="#onExit"/>
+        </VBox>
+
+
+    </VBox>
+
+</StackPane>

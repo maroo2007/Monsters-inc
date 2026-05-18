@@ -1,0 +1,300 @@
+/* ============================================================
+   game.css — In-game screen  (readability-first)
+   ============================================================ */
+
+/* ── Screen root ─────────────────────────────────────────────── */
+.root {
+    -fx-background-color: #1c2833;
+}
+
+/* ── Header bar ──────────────────────────────────────────────── */
+.game-header {
+    -fx-background-color: #17202a;
+    -fx-padding: 8 14 8 14;
+    -fx-border-color: #2e86c1;
+    -fx-border-width: 0 0 3 0;
+}
+
+.header-logo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5dade2;
+}
+
+.turn-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f3f4;
+}
+
+.turn-player {
+    -fx-text-fill: #f1c40f;
+}
+
+.turn-opponent {
+    -fx-text-fill: #e74c3c;
+}
+
+.dice-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #a9cce3;
+}
+
+.progress-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #82e0aa;
+    -fx-font-weight: bold;
+}
+
+.btn-pause {
+    -fx-background-color: #2e4057;
+    -fx-text-fill: #aab7b8;
+    -fx-font-size: 12px;
+    -fx-border-color: #4a6fa5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-padding: 5 12 5 12;
+}
+.btn-pause:hover { -fx-background-color: #3d566e; -fx-text-fill: #d5d8dc; }
+
+/* ── Board area ──────────────────────────────────────────────── */
+.board-area {
+    -fx-background-color: #1c2833;
+    -fx-padding: 10;
+}
+
+.board-grid {
+    -fx-background-color: #212f3d;
+    -fx-padding: 6;
+    -fx-effect: dropshadow(gaussian, #000000aa, 16, 0.5, 0, 4);
+}
+
+/* ═══════════════════════════════════════
+   BOARD CELLS — all text must be WHITE
+   ═══════════════════════════════════════ */
+
+.board-cell {
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-width: 1;
+    -fx-border-color: #2d3d4d;
+}
+
+/* ─ Regular cell: medium blue-gray ─ */
+.cell-regular {
+    -fx-background-color: #2e4057;
+    -fx-border-color: #3d566e;
+}
+
+/* ─ SCARER door: deep blue ─ */
+.cell-door-scarer {
+    -fx-background-color: #1a5276;
+    -fx-border-color: #2e86c1;
+}
+
+/* ─ LAUGHER door: deep amber/orange ─ */
+.cell-door-laugher {
+    -fx-background-color: #784212;
+    -fx-border-color: #e67e22;
+}
+
+/* ─ Conveyor belt: deep green ─ */
+.cell-conveyor {
+    -fx-background-color: #1d6a2c;
+    -fx-border-color: #27ae60;
+}
+
+/* ─ Contamination sock: deep red ─ */
+.cell-sock {
+    -fx-background-color: #7b241c;
+    -fx-border-color: #e74c3c;
+}
+
+/* ─ Card cell: deep purple ─ */
+.cell-card {
+    -fx-background-color: #6c3483;
+    -fx-border-color: #9b59b6;
+}
+
+/* ─ Monster cell: deep orange ─ */
+.cell-monster {
+    -fx-background-color: #784212;
+    -fx-border-color: #f39c12;
+}
+
+/* ─ Index number: always bright white ─ */
+.cell-index {
+    -fx-font-size: 8px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 1 0 0 2;
+}
+
+/* ─ Type icon: bright white ─ */
+.cell-type-icon {
+    -fx-font-size: 10px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+/* ─ Monster marker inside cell ─ */
+.cell-monster-marker {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f9e79f;
+}
+
+/* ─ PLAYER HERE: bright gold — defined last so it overrides cell type colors ─ */
+.cell-player-here {
+    -fx-background-color: #f1c40f;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+}
+
+/* ─ OPPONENT HERE: bright red ─ */
+.cell-opponent-here {
+    -fx-background-color: #e74c3c;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+.game-sidebar {
+    -fx-background-color: #17202a;
+    -fx-border-color: #2e86c1;
+    -fx-border-width: 0 0 0 2;
+}
+
+/* ── Monster panel ───────────────────────────────────────────── */
+.monster-panel {
+    -fx-background-color: #212f3d;
+    -fx-background-radius: 6;
+    -fx-padding: 8;
+    -fx-border-color: #2e4057;
+    -fx-border-width: 1;
+    -fx-border-radius: 6;
+}
+
+.panel-active {
+    -fx-border-color: #f1c40f;
+    -fx-border-width: 2;
+    -fx-effect: dropshadow(gaussian, #f1c40f55, 6, 0.3, 0, 0);
+}
+
+.panel-inactive {
+    -fx-border-color: #2e4057;
+    -fx-opacity: 0.8;
+}
+
+.panel-title {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7fb3d3;
+}
+
+.monster-name {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f3f4;
+}
+
+.monster-type {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5dade2;
+}
+
+.monster-role {
+    -fx-font-size: 11px;
+    -fx-text-fill: #aab7b8;
+}
+
+.monster-pos {
+    -fx-font-size: 12px;
+    -fx-text-fill: #82e0aa;
+    -fx-font-weight: bold;
+}
+
+.energy-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #d5d8dc;
+}
+
+.energy-bar {
+    -fx-pref-height: 12;
+    -fx-background-radius: 6;
+}
+.energy-bar .bar { -fx-background-radius: 6; }
+.bar-low  .bar { -fx-background-color: #e74c3c; }
+.bar-mid  .bar { -fx-background-color: #f39c12; }
+.bar-high .bar { -fx-background-color: #27ae60; }
+
+.status-icon {
+    -fx-font-size: 12px;
+    -fx-text-fill: #f0f3f4;
+    -fx-background-color: #2e4057;
+    -fx-background-radius: 4;
+    -fx-padding: 1 4 1 4;
+}
+
+/* ── Action buttons ──────────────────────────────────────────── */
+.action-buttons {
+    -fx-padding: 2 0 2 0;
+}
+
+.btn-powerup {
+    -fx-background-color: #512e5f;
+    -fx-text-fill: #d7bde2;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 9 8 9 8;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
+.btn-powerup:hover    { -fx-background-color: #6c3483; -fx-text-fill: #f0e6ff; }
+.btn-powerup:disabled { -fx-opacity: 0.5; }
+
+/* ── Event log ───────────────────────────────────────────────── */
+.event-log { -fx-background-color: transparent; }
+
+.log-header {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #7fb3d3;
+    -fx-padding: 0 0 3 0;
+}
+
+.log-scroll {
+    -fx-background-color: #212f3d;
+    -fx-background: #212f3d;
+    -fx-border-color: #2e4057;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+
+.log-entries { -fx-padding: 4; }
+
+.log-entry   { -fx-font-size: 11px; -fx-text-fill: #d5d8dc; -fx-wrap-text: true; }
+.log-normal  { -fx-text-fill: #d5d8dc; }
+.log-success { -fx-text-fill: #82e0aa; -fx-font-weight: bold; }
+.log-warning { -fx-text-fill: #f9e79f; }
+.log-error   { -fx-text-fill: #f1948a; }
+
+/* ── Legend bar ──────────────────────────────────────────────── */
+.legend-bar {
+    -fx-background-color: #17202a;
+    -fx-padding: 6 16 6 16;
+    -fx-border-color: #2e86c1;
+    -fx-border-width: 2 0 0 0;
+}
+
+.legend-player   { -fx-text-fill: #f1c40f; -fx-font-size: 11px; -fx-font-weight: bold; }
+.legend-opponent { -fx-text-fill: #e74c3c; -fx-font-size: 11px; -fx-font-weight: bold; }
+.legend-door     { -fx-text-fill: #5dade2; -fx-font-size: 11px; }
+.legend-card     { -fx-text-fill: #bb8fce; -fx-font-size: 11px; }
+.legend-conveyor { -fx-text-fill: #58d68d; -fx-font-size: 11px; }
+.legend-sock     { -fx-text-fill: #f1948a; -fx-font-size: 11px; }
+.legend-monster  { -fx-text-fill: #f0b27a; -fx-font-size: 11px; }

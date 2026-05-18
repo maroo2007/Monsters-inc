@@ -1,0 +1,232 @@
+/* ============================================================
+   app.css — Global Monsters Inc Design System
+   Palette: deep teal bg · cyan accent · orange SCARER · green LAUGHER
+   ============================================================ */
+
+/* ── Root variables (emulated via repeated values) ───────────── */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-background-color: #0d2137;
+}
+
+/* ═══════════════════════════════════════════════════
+   MAIN MENU
+   ═══════════════════════════════════════════════════ */
+.main-menu-root {
+    -fx-background-color: linear-gradient(to bottom, #0a1a2e, #1a3a5c, #0a1a2e);
+    -fx-padding: 60 80 40 80;
+}
+
+.title-main {
+    -fx-font-size: 56px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00e5ff;
+    -fx-effect: dropshadow(gaussian, #00e5ff88, 20, 0.6, 0, 0);
+}
+
+.title-sub {
+    -fx-font-size: 20px;
+    -fx-text-fill: #80cbc4;
+    -fx-font-style: italic;
+}
+
+.title-emoji {
+    -fx-font-size: 36px;
+    -fx-padding: 8 0 0 0;
+}
+
+.footer-label {
+    -fx-text-fill: #4a6fa5;
+    -fx-font-size: 12px;
+}
+
+/* ═══════════════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════════════ */
+.btn-primary {
+    -fx-background-color: #00bcd4;
+    -fx-text-fill: #0a1a2e;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #00bcd488, 8, 0.3, 0, 2);
+}
+
+.btn-primary:hover {
+    -fx-background-color: #26c6da;
+    -fx-effect: dropshadow(gaussian, #00bcd4cc, 14, 0.5, 0, 3);
+}
+
+.btn-primary:pressed {
+    -fx-background-color: #0097a7;
+    -fx-effect: none;
+}
+
+.btn-secondary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #80cbc4;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 8;
+    -fx-border-color: #80cbc4;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #80cbc422;
+    -fx-text-fill: #b2dfdb;
+}
+
+.btn-danger {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ef5350;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 8;
+    -fx-border-color: #ef5350;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #ef535022;
+}
+
+.btn-back {
+    -fx-background-color: transparent;
+    -fx-text-fill: #78909c;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-border-color: #546e7a;
+    -fx-border-radius: 6;
+    -fx-padding: 8 18 8 18;
+    -fx-background-radius: 6;
+}
+
+.btn-back:hover {
+    -fx-background-color: #546e7a22;
+    -fx-text-fill: #b0bec5;
+}
+
+.btn-scarer {
+    -fx-background-color: #e64a19;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-scarer:hover { -fx-background-color: #ff5722; }
+
+.btn-laugher {
+    -fx-background-color: #388e3c;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.btn-laugher:hover { -fx-background-color: #43a047; }
+
+/* ═══════════════════════════════════════════════════
+   ROLE SELECTION
+   ═══════════════════════════════════════════════════ */
+.role-selection-root {
+    -fx-background-color: linear-gradient(to bottom, #0a1a2e, #1a3a5c, #0a1a2e);
+    -fx-padding: 40 80 40 80;
+}
+
+.role-card {
+    -fx-background-color: #122840;
+    -fx-padding: 32 28 32 28;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-width: 2;
+    -fx-border-color: #1e4060;
+    -fx-min-width: 240;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #00000066, 12, 0.4, 0, 4);
+}
+
+.role-card:hover {
+    -fx-effect: dropshadow(gaussian, #00e5ff66, 20, 0.5, 0, 4);
+    -fx-border-color: #00bcd4;
+}
+
+.role-card-scarer:hover {
+    -fx-border-color: #ff5722;
+    -fx-effect: dropshadow(gaussian, #ff572266, 20, 0.5, 0, 4);
+}
+
+.role-card-laugher:hover {
+    -fx-border-color: #43a047;
+    -fx-effect: dropshadow(gaussian, #43a04766, 20, 0.5, 0, 4);
+}
+
+.role-emoji  { -fx-font-size: 56px; }
+.role-title  { -fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: white; }
+.role-desc   { -fx-font-size: 14px; -fx-text-fill: #80cbc4; }
+.role-hint   { -fx-font-size: 11px; -fx-text-fill: #546e7a; -fx-font-style: italic; }
+
+.vs-label {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #546e7a;
+}
+
+.status-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ef5350;
+}
+
+/* ═══════════════════════════════════════════════════
+   WINNER SCREEN
+   ═══════════════════════════════════════════════════ */
+.winner-root {
+    -fx-background-color: linear-gradient(to bottom, #0a1a2e, #1a4060, #0a1a2e);
+    -fx-padding: 60;
+}
+
+.winner-trophy { -fx-font-size: 96px; }
+
+.winner-title {
+    -fx-font-size: 52px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffd600;
+    -fx-effect: dropshadow(gaussian, #ffd60099, 20, 0.6, 0, 0);
+}
+
+.winner-name {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.winner-role {
+    -fx-font-size: 20px;
+    -fx-text-fill: #80cbc4;
+}
+
+.stats-box {
+    -fx-background-color: #122840;
+    -fx-background-radius: 12;
+    -fx-padding: 20 40 20 40;
+    -fx-border-color: #1e4060;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+
+.stat-label { -fx-font-size: 16px; -fx-text-fill: #b2dfdb; }
+.role-scarer { -fx-text-fill: #ff5722; }
+.role-laugher { -fx-text-fill: #43a047; }

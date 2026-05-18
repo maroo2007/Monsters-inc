@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="game.gui.controllers.WinnerController"
+           stylesheets="@../css/app.css"
+           prefWidth="900" prefHeight="600">
+
+    <VBox alignment="CENTER" spacing="32" styleClass="winner-root">
+
+
+        <Label fx:id="trophyLabel" text="[TROPHY]" styleClass="winner-trophy"/>
+
+
+        <VBox alignment="CENTER" spacing="8">
+            <Label fx:id="winnerTitle" text="WINNER!" styleClass="winner-title"/>
+            <Label fx:id="winnerName"  text="Monster Name" styleClass="winner-name"/>
+            <Label fx:id="winnerRole"  text="ROLE"         styleClass="winner-role"/>
+        </VBox>
+
+
+        <VBox fx:id="statsBox" alignment="CENTER" spacing="6" styleClass="stats-box">
+            <Label fx:id="energyStat"   text="Final Energy: 0"    styleClass="stat-label"/>
+            <Label fx:id="positionStat" text="Final Position: 99" styleClass="stat-label"/>
+        </VBox>
+
+
+        <HBox alignment="CENTER" spacing="20">
+            <Button text="PLAY AGAIN" styleClass="btn-primary" prefWidth="180"
+                    onAction="#onPlayAgain"/>
+            <Button text="MAIN MENU"  styleClass="btn-secondary" prefWidth="180"
+                    onAction="#onMainMenu"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

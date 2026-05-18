@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "DoorDash GUI (Java 8)",
+            "request": "launch",
+            "mainClass": "game.gui.Main",
+            "projectName": "DoorDashM1",
+            "classPaths": [
+                "${workspaceFolder}/bin",
+                "${workspaceFolder}/lib/jfxrt.jar"
+            ],
+            "vmArgs": ""
+        },
+        {
+            "type": "java",
+            "name": "Run M1 Tests",
+            "request": "launch",
+            "mainClass": "org.junit.runner.JUnitCore",
+            "args": "game.tests.Milestone1PublicTests",
+            "projectName": "DoorDashM1",
+            "classPaths": [
+                "${workspaceFolder}/bin",
+                "${workspaceFolder}/lib/junit-4.13.2.jar",
+                "${workspaceFolder}/lib/hamcrest-core-1.3.jar"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Run M2 Tests",
+            "request": "launch",
+            "mainClass": "org.junit.runner.JUnitCore",
+            "args": "game.tests.Milestone2PublicTests",
+            "projectName": "DoorDashM1",
+            "classPaths": [
+                "${workspaceFolder}/bin",
+                "${workspaceFolder}/lib/junit-4.13.2.jar",
+                "${workspaceFolder}/lib/hamcrest-core-1.3.jar"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+@echo off
+cd /d "e:\monsters-inc\DoorDashM1"
+"C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\jre\17.0.4.1-win32-x86_64\bin\javac.exe" -cp "src;C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\server\plugins\org.junit_4.13.2.v20211018-1956.jar;C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\server\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar" -sourcepath src -d bin ^
+  src\game\engine\*.java src\game\engine\cards\*.java src\game\engine\cells\*.java ^
+  src\game\engine\monsters\*.java src\game\engine\exceptions\*.java ^
+  src\game\engine\interfaces\*.java src\game\engine\dataloader\*.java ^
+  src\game\tests\*.java
+echo COMPILE_DONE
+echo === M1 ===
+"C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\jre\17.0.4.1-win32-x86_64\bin\java.exe" -cp "bin;C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\server\plugins\org.junit_4.13.2.v20211018-1956.jar;C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\server\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar" org.junit.runner.JUnitCore game.tests.Milestone1PublicTests
+echo === M2 ===
+"C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\jre\17.0.4.1-win32-x86_64\bin\java.exe" -cp "bin;C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\server\plugins\org.junit_4.13.2.v20211018-1956.jar;C:\Users\Marwan\.antigravity\extensions\redhat.java-1.12.0-win32-x64\server\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar" org.junit.runner.JUnitCore game.tests.Milestone2PublicTests

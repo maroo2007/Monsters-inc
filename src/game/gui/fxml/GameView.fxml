@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import game.gui.components.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="game.gui.controllers.GameController"
+            stylesheets="@../css/app.css, @../css/game.css"
+            prefWidth="1200" prefHeight="750">
+
+
+    <top>
+        <HBox styleClass="game-header" alignment="CENTER_LEFT" spacing="16">
+            <Label text="DoorDash" styleClass="header-logo"/>
+            <Separator orientation="VERTICAL"/>
+            <Label fx:id="turnLabel" text="Your Turn" styleClass="turn-label"/>
+            <Separator orientation="VERTICAL"/>
+            <Label fx:id="diceLabel" text="Roll the dice!" styleClass="dice-label"/>
+            <Separator orientation="VERTICAL"/>
+            <Label fx:id="progressLabel" text="Cell 0/99  |  Energy 0/1000" styleClass="progress-label"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="PAUSE" styleClass="btn-pause" onAction="#onPause"/>
+        </HBox>
+    </top>
+
+
+    <center>
+        <StackPane styleClass="board-area">
+            <BoardView fx:id="boardView"/>
+        </StackPane>
+    </center>
+
+
+    <right>
+        <VBox styleClass="game-sidebar" spacing="12" prefWidth="240">
+            <padding>
+                <Insets top="12" right="12" bottom="12" left="12"/>
+            </padding>
+
+
+            <MonsterPanel fx:id="playerPanel"/>
+
+            <Separator/>
+
+
+            <MonsterPanel fx:id="opponentPanel"/>
+
+            <Separator/>
+
+
+            <VBox spacing="8" styleClass="action-buttons">
+                <Button fx:id="btnRoll" text="ROLL DICE"
+                        styleClass="btn-primary" prefWidth="215"
+                        onAction="#onRollDice"/>
+                <Button fx:id="btnPowerup" text="USE POWERUP (500)"
+                        styleClass="btn-powerup" prefWidth="215"
+                        onAction="#onUsePowerup"/>
+            </VBox>
+
+            <Separator/>
+
+
+            <EventLog fx:id="eventLog"/>
+
+        </VBox>
+    </right>
+
+
+    <bottom>
+        <HBox styleClass="legend-bar" alignment="CENTER" spacing="20">
+            <Label text="[P] You" styleClass="legend-player"/>
+            <Label text="[O] Opponent" styleClass="legend-opponent"/>
+            <Label text="D Door" styleClass="legend-door"/>
+            <Label text="[C] Card" styleClass="legend-card"/>
+            <Label text="&gt; Conveyor" styleClass="legend-conveyor"/>
+            <Label text="[S] Sock" styleClass="legend-sock"/>
+            <Label text="[M] Monster Cell" styleClass="legend-monster"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
