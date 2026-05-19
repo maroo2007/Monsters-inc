@@ -16,16 +16,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
-
-import java.util.Optional;
 
 public class GameController {
 
@@ -41,7 +36,6 @@ public class GameController {
 
     private final GameStateManager gsm = GameStateManager.getInstance();
     private boolean powerupUsedThisTurn = false;
-
 
     @FXML
     public void initialize() {
@@ -66,7 +60,6 @@ public class GameController {
         eventLog.addEntry("[CHEATS]  W = instant win   |   E = +500 energy");
     }
 
-
     private void handleCheatKey(KeyEvent event) {
         if (event.getCode() == KeyCode.W) {
             cheatWin();
@@ -74,7 +67,6 @@ public class GameController {
             cheatEnergy();
         }
     }
-
 
     private void cheatWin() {
         if (gsm.getGame() == null) return;
@@ -86,14 +78,12 @@ public class GameController {
         checkWin();
     }
 
-
     private void cheatEnergy() {
         if (gsm.getGame() == null) return;
         gsm.getPlayer().alterEnergy(500);
         refreshAll();
         eventLog.addWarning("[CHEAT E] Energy boosted! Now: " + gsm.getPlayer().getEnergy());
     }
-
 
     @FXML
     private void onRollDice() {
@@ -144,20 +134,20 @@ public class GameController {
     private void onPause() {
         setControlsEnabled(false);
 
-        Alert pause = SceneManager.getInstance().buildAlert(AlertType.CONFIRMATION);
-        pause.setTitle("Game Paused");
-        pause.setHeaderText("Game Paused");
-        pause.setContentText("What would you like to do?");
-        pause.getButtonTypes().setAll(new ButtonType("Resume"), new ButtonType("Quit to Menu"));
+        String choice = SceneManager.getInstance().showChoice(
+            "Game Paused",
+            "Game Paused",
+            "What would you like to do?",
+            "Resume",
+            "Quit to Menu"
+        );
 
-        Optional<ButtonType> choice = pause.showAndWait();
-        if (choice.isPresent() && "Quit to Menu".equals(choice.get().getText())) {
+        if ("Quit to Menu".equals(choice)) {
             SceneManager.getInstance().showMainMenu();
         } else {
             setControlsEnabled(gsm.isPlayerTurn());
         }
     }
-
 
     private void scheduleOpponentTurn() {
         turnLabel.setText("Opponent is thinking...");
@@ -201,7 +191,6 @@ public class GameController {
             updatePowerupButton();
         }
     }
-
 
     private void refreshAll() {
         boardView.refresh(
@@ -264,7 +253,6 @@ public class GameController {
         }
     }
 
-
     private boolean checkWin() {
         Monster winner = gsm.getWinner();
         if (winner == null) return false;
@@ -280,11 +268,11 @@ public class GameController {
         eventLog.addSuccess(headline + "  " + winner.getName()
                 + " wins with " + winner.getEnergy() + " energy!");
 
-        Alert alert = SceneManager.getInstance().buildAlert(AlertType.INFORMATION);
-        alert.setTitle(playerWon ? "Victory!" : "Defeat...");
-        alert.setHeaderText(headline);
-        alert.setContentText(body);
-        alert.showAndWait();
+        SceneManager.getInstance().showInfo(
+            playerWon ? "Victory!" : "Defeat...",
+            headline,
+            body
+        );
 
         SceneManager.getInstance().showWinnerScreen();
         return true;

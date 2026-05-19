@@ -3,7 +3,6 @@ package game.gui.controllers;
 import game.gui.SceneManager;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 
 public class MainMenuController {
 
@@ -14,10 +13,9 @@ public class MainMenuController {
 
     @FXML
     private void onHowToPlay() {
-        Alert info = SceneManager.getInstance().buildAlert(Alert.AlertType.INFORMATION);
-        info.setTitle("How to Play");
-        info.setHeaderText("DoorDash  -  Scare vs Laugh Touchdown");
-        info.setContentText(
+        SceneManager.getInstance().showInfo(
+            "How to Play",
+            "DoorDash  -  Scare vs Laugh Touchdown",
             "OBJECTIVE\n" +
             "Reach cell 99 with at least 1000 energy to WIN!\n\n" +
             "EACH TURN\n" +
@@ -43,7 +41,6 @@ public class MainMenuController {
             "  W  -  teleport to cell 99 with max energy (instant win)\n" +
             "  E  -  add +500 energy to your monster"
         );
-        info.showAndWait();
     }
 
     @FXML
